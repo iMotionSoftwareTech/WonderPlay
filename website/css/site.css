@@ -1,0 +1,351 @@
+/* --- RESET & VARIABLES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary-orange: #f39c12;
+    --dark-navy: #1a252f;
+    --light-bg: #fffdf6;
+    --text-color: #2c3e50;
+}
+
+body {
+    background-color: #ffffff;
+    color: var(--text-color);
+}
+
+/* --- NAVBAR --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background-color: #fff;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--primary-orange);
+}
+
+.logoHome {
+    text-decoration: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin: 0 1.2rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-orange);
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.nav-icons button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    cursor: pointer;
+    position: relative;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #e74c3c;
+    color: white;
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+/* --- HERO SECTION --- */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                url('https://images.pexels.com/photos/27661855/pexels-photo-27661855.jpeg?auto=compress&cs=tinysrgb&q=80&w=1600') no-repeat center center/cover;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+/* --- BUTTONS --- */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s, background-color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.btn-orange {
+    background-color: var(--primary-orange);
+    color: white;
+}
+
+.btn-orange:hover {
+    background-color: #d6860b;
+}
+
+.btn-white {
+    background-color: white;
+    color: #2c3e50;
+}
+
+.btn-white:hover {
+    background-color: #f8f9fa;
+}
+
+/* --- SHOP BY CATEGORY --- */
+.category-section {
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    color: var(--dark-navy);
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.category-card {
+    height: 250px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 1.5rem;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.image-card {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    box-shadow: inset 0 -60px 40px rgba(0,0,0,0.5);
+}
+
+.card-label {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.image-card .card-label {
+    color: white;
+}
+
+/* Specific colored style tiles matching image 2 */
+.color-card {
+    justify-content: center;
+    gap: 1rem;
+}
+
+.pink-beige { background-color: #fffdf0; }
+.colored-text { color: #b76e53; }
+
+.soft-blue { background-color: #eef2ff; }
+.colored-text-blue { color: #4f46e5; }
+
+.card-icon {
+    font-size: 2rem;
+}
+
+/* --- SUMMER PROMO BANNER --- */
+.summer-banner {
+    background: linear-gradient(90deg, rgba(23,162,184,0.85) 0%, rgba(40,167,69,0.7) 100%), 
+                url('https://images.unsplash.com/photo-1501426026826-31c667bdf23d?q=80&w=1600') center center/cover;
+    padding: 5rem 8%;
+    color: white;
+}
+
+.summer-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.summer-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+/* --- POPULAR BRANDS --- */
+.brands-section {
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.brands-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.brand-pill {
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Colors extracted from layout theme */
+.bg-yellow { background-color: #fef9c3; color: #713f12; }
+.bg-pink { background-color: #fce7f3; color: #9d174d; }
+.bg-red { background-color: #fee2e2; color: #991b1b; }
+.bg-blue { background-color: #dbeafe; color: #1e40af; }
+.bg-purple { background-color: #fae8ff; color: #86198f; }
+.bg-green { background-color: #dcfce7; color: #166534; }
+.bg-teal { background-color: #ccfbf1; color: #115e59; }
+.bg-indigo { background-color: #e0e7ff; color: #3730a3; }
+.bg-purple-light { background-color: #f3e8ff; color: #6b21a8; }
+
+/* --- NEWSLETTER SECTION --- */
+.newsletter-section {
+    background-color: var(--light-bg);
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.newsletter-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.newsletter-section p {
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.newsletter-form input {
+    width: 70%;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+/* --- FOOTER --- */
+.footer {
+    background-color: var(--dark-navy);
+    color: #a0aec0;
+    padding: 2rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    position:fixed;
+    bottom:0;
+    width:100%;
+}
+
+.footer-links a {
+    color: #a0aec0;
+    text-decoration: none;
+    margin-left: 1.5rem;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+/* --- LOGIN SECTION --- */
+.login-section {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    margin: -100px 0 0 -100px;
+ }
+
+ .formMarginSplit { 
+    margin-top: 20px;
+ }
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .newsletter-form {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .newsletter-form input {
+        width: 100%;
+    }
+    .footer {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    .footer-links a {
+        margin: 0 0.7rem;
+    }
+}
